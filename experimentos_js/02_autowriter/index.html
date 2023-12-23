@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Autowriter
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body class="container">
+
+    <!-- Contenido de tu página va aquí -->
+    <h1 class="title">
+      autowriter example
+    </h1>
+
+    <!-- ------------- -->
+
+      <p> <div class="switch-text">
+	English
+        <div style="display:none;">
+	  Español
+        </div>
+      </div> </p>
+
+    <!-- ------------- -->
+
+    <h1 class="title">
+      <div id="autowriter-output">
+      autowriter output
+      </div>
+    </h1>
+
+    <!-- ------------- -->
+
+    <ul id="autowriter-input"  style="display:contents">
+      <li class="switch-text">
+	hello how are you
+	<div style="display:none">
+	  hola cómo estás
+	</div>
+      </li>
+      <li class="switch-text">
+	whats your name
+	<div style="display:none">
+	  cual es tu nombre
+	</div>
+      </li>
+      <li class="switch-text">
+	hello hi nice to meet you
+	<div style="display:none">
+	  hola un gusto conocerte
+	</div>
+      </li>
+    </ul>
+
+    <!-- ------------- -->
+
+    <!-- Switch text button-->
+  <button id="switch-text-button" class="button">
+    <div class="switch-text">    ENG 
+      <div style="display:none"> ESP </div>
+    </div>  
+  </button>
+
+
+    <!-- <script src="script.js"></script> -->
+    <script src="switch-text.js"></script>
+    <script src="autowriter.js"></script>
+
+
+</body>
+</html>
