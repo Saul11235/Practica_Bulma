@@ -4,9 +4,9 @@ class autowriter  {
   //--------------------------
   constructor() {
     //=================================
-    this.timechar=55;     //config <-autowriter
-    this.timedelete=15;
-    this.timeread=1100 ;    
+    this.timechar=60;     //config <-autowriter
+    this.timedelete=8;
+    this.timeread=1200;    
     //=================================
     this.count_elem=0;   //count element in  autowriter-input
     this.count_char=0;   //count char element
