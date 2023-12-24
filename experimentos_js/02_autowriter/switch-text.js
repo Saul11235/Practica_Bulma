@@ -16,16 +16,15 @@ function switch_a_element(element) {
     }
   }
   if (divChild!= null) {
-    let old_text=element.innerText.trim();
-    let new_text=divChild.innerText.trim();
+    let old_text=element.childNodes[0].textContent.trim().slice();
+    let new_text=divChild.innerText.trim().slice();
     let newdiv=document.createElement("div");
     newdiv.style.display="none";
-    newdiv.innerText=old_text;
+    newdiv.innerHTML=old_text;
     element.innerText=new_text;
     element.appendChild(newdiv);
   }
 }
-
 
 function switch_all_elements() {
   let all_elements=document.getElementsByClassName("switch-text");
@@ -43,7 +42,4 @@ var browser_lang=navigator.language || navigator.userLanguage;
 if ( browser_lang.startsWith("es")) {
   switch_all_elements();
 }
-
-
-
 

@@ -16,8 +16,8 @@ function switch_a_element(element) {
     }
   }
   if (divChild!= null) {
-    let old_text=element.innerText.trim();
-    let new_text=divChild.innerText.trim();
+    let old_text=element.innerText.trim().slice();
+    let new_text=divChild.innerText.trim().slice();
     let newdiv=document.createElement("div");
     newdiv.style.display="none";
     newdiv.innerText=old_text;

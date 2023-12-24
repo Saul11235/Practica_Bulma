@@ -4,7 +4,8 @@ class autowriter  {
   //--------------------------
   constructor() {
     //=================================
-    this.timechar=35;     //config <-autowriter
+    this.timechar=55;     //config <-autowriter
+    this.timedelete=15;
     this.timeread=1100 ;    
     //=================================
     this.count_elem=0;   //count element in  autowriter-input
@@ -27,13 +28,18 @@ class autowriter  {
     return document.getElementById("autowriter-input").getElementsByTagName("li");
   }
   //--------------------------
-  get_full_line() {
+  get_current_element() {
     var input_elements=this.get_input_elements();
     if (this.count_elem>=input_elements.length) {
       this.count_elem=0; this.count_char=0;
       this.begin=true;
     }
-    return input_elements[this.count_elem].innerText.trim();
+    return input_elements[this.count_elem]
+  }
+  //--------------------------
+  get_full_line() {
+    var current_element=this.get_current_element()
+    return current_element.childNodes[0].textContent.trim();
   }
   //--------------------------
   get_trim_line() {
@@ -62,16 +68,20 @@ class autowriter  {
 	setTimeout(function() {
 	autowriter_obj.run();
 	}, this.timeread); 
-    } else {
+    } else if(this.begin) {
       // time to write a char
       setTimeout(function() {
 	autowriter_obj.run();
 	}, this.timechar); 
+    } else {
+      //time to delete a char
+      setTimeout(function() {
+	autowriter_obj.run();
+      },this.timedelete);
     }
   }
   //--------------------------
 }
-
 
 var autowriter_obj = new autowriter();
 autowriter_obj.run();
