@@ -6,9 +6,70 @@
     <title>Layout container</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body class="container block">
+  <body class="block">
 
     <h1 class="title block"> Container </h1>
+    <p> container es un div que centra el contenido horizontalmente <br/>
+    puede ser un hijo de los siguientes elementos
+    <ul>
+      <li>navbar</li>
+      <li>heronavbar</li>
+      <li>section</li>
+      <li>footer</li>
+    </ul>
+    </p>
+
+    <!-- --------------- -->
+
+
+<div class="container">
+  <div class="notification is-primary">
+    este container  tiene dentro un subdiv class="notification is-primary"<br>
+    This container is <strong>centered</strong> on desktop and larger viewports.
+  </div>
+</div>
+
+
+    <!-- --------------- -->
+    <p>colocando modificadores </p>
+
+    <!-- --------------- -->
+
+<div class="container is-widescreen">
+  <div class="notification is-link">
+    igual al anterior, pero el container es class="container is-widescreen" </br>
+    This container is <strong>fullwidth</strong> <em>until</em> the <code>$widescreen</code> breakpoint.
+  </div>
+</div>
+
+    <!-- --------------- -->
+
+<div class="container is-fullhd">
+  <div class="notification is-danger">
+    igual al anterior, pero el container es class="container is-fullhd" </br>
+    This container is <strong>fullwidth</strong> <em>until</em> the <code>$fullhd</code> breakpoint.
+  </div>
+</div>
+    <!-- --------------- -->
+
+<div class="container is-max-desktop">
+  <div class="notification is-success">
+
+    igual al anterior, pero el container es class="container is-max-desktop" </br>
+    This container has a <code>max-width</code> of <code>$desktop - $container-offset</code> on widescreen and fullhd.
+  </div>
+</div>
+
+    <!-- --------------- -->
+
+<div class="container is-max-widescreen">
+  <div class="notification is-warning">
+    igual al anterior, pero el container es class="container is-max-widescreen" </br>
+    This container has a <code>max-width</code> of <code>$widescreen - $container-offset</code> on fullhd.
+  </div>
+</div>
+
+    <!-- --------------- -->
 
 
   </body>

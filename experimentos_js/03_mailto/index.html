@@ -9,50 +9,72 @@
     </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-<body class="container">
+<body>
 
 
-
-
-
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Contacto</h1>
-
-      <form action="mailto:destinatario@example.com" method="post" enctype="text/plain">
-
-        <div class="field">
-          <label class="label" for="nombre">Nombre:</label>
-          <div class="control">
-            <input class="input" type="text" id="nombre" name="nombre" required>
+  <!-- Sección de formulario de contacto -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title has-text-centered">Contáctanos</h2>
+        <form>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Nombre</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Tu nombre">
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label class="label" for="correo">Correo Electrónico:</label>
-          <div class="control">
-            <input class="input" type="email" id="correo" name="correo" required>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Correo Electrónico</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="email" placeholder="correo@example.com">
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label class="label" for="mensaje">Mensaje:</label>
-          <div class="control">
-            <textarea class="textarea" id="mensaje" name="mensaje" required></textarea>
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">Mensaje</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <div class="control">
-            <input class="button is-primary" type="submit" value="Enviar">
+          <div class="field is-horizontal">
+            <div class="field-label"></div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <button class="button is-info" type="submit">Enviar</button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-      </form>
-
+        </form>
+      </div>
     </div>
   </section>
 
+ 
+
+  
 
 
 
