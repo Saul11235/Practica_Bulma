@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<title>Carrusel Simple con Controles</title>
+<style>
+    /* Estilos básicos del carrusel */
+    .slider {
+        position: relative;
+        overflow: hidden;
+    }
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+        min-width: 100%;
+    }
+    /* Estilos para los controles */
+    .controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .control-btn {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        border: none;
+        outline: none;
+        transition: background 0.3s ease;
+    }
+    .control-btn:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+</style>
+</head>
+<body>
+<div class="slider">
+    <div class="slides">
+        <div class="hero is-halfheight slide" style="background-color: #ff5733;">Slide 1</div>
+        <div class="hero is-halfheight slide" style="background-color: #33ff57;">Slide 2</div>
+        <div class="hero is-halfheight slide" style="background-color: #5733ff;">Slide 3</div>
+    </div>
+    <div class="controls">
+        <button class="prev control-btn">Anterior</button>
+        <button class="next control-btn">Siguiente</button>
+    </div>
+</div>
+<script>
+    // JavaScript para controlar el carrusel
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelector('.slides');
+    const slideWidth = document.querySelector('.slide').clientWidth;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let counter = 0;
+
+    function slide() {
+        slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+    }
+
+    function nextSlide() {
+        counter++;
+        if (counter === slides.children.length) {
+            counter = 0;
+        }
+        slide();
+    }
+
+    function prevSlide() {
+        counter--;
+        if (counter < 0) {
+            counter = slides.children.length - 1;
+        }
+        slide();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 2000); // Cambia cada 2 segundos
+</script>
+</body>
+</html>

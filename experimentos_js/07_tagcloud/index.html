@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Cloud Example with Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .tag-cloud {
+      display: inline-block;
+    }
+    .tag {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .tag.is-small {
+      font-size: 0.75rem;
+    }
+    .tag.is-medium {
+      font-size: 1rem;
+    }
+    .tag.is-large {
+      font-size: 1.25rem;
+    }
+    .tag.is-primary {
+      background-color: #3273dc;
+      color: #fff;
+    }
+    .tag.is-info {
+      background-color: #209cee;
+      color: #fff;
+    }
+    .tag.is-success {
+      background-color: #23d160;
+      color: #fff;
+    }
+    .tag.is-warning {
+      background-color: #ffdd57;
+      color: #363636;
+    }
+    .tag.is-danger {
+      background-color: #ff3860;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="tag-cloud">
+    <span class="tag is-primary">Tag 1</span>
+    <span class="tag is-info">Tag 2</span>
+    <span class="tag is-success">Tag 3</span>
+    <span class="tag is-warning">Tag 4</span>
+    <span class="tag is-danger">Tag 5</span>
+    <!-- Add more tags as needed -->
+  </div>
+</body>
+</html>

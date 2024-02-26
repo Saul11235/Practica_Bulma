@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulma Carousel Example with Cards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="carousel">
+    <div id="carouselItems" class="carousel-items">
+      <div class="carousel-item card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="image1.jpg" alt="Image 1">
+          </figure>
+        </div>
+        <div class="card-content">
+          <p>This is image 1</p>
+        </div>
+      </div>
+      <div class="carousel-item card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="image2.jpg" alt="Image 2">
+          </figure>
+        </div>
+        <div class="card-content">
+          <p>This is image 2</p>
+        </div>
+      </div>
+      <div class="carousel-item card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="image3.jpg" alt="Image 3">
+          </figure>
+        </div>
+        <div class="card-content">
+          <p>This is image 3</p>
+        </div>
+      </div>
+    </div>
+    <button id="prevBtn" class="carousel-btn prev-btn button is-primary">Previous</button>
+    <button id="nextBtn" class="carousel-btn next-btn button is-primary">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel Simple</title>
+<style>
+    /* Estilos básicos del carrusel */
+    .slider {
+        overflow: hidden;
+    }
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+        min-width: 100%;
+    }
+</style>
+</head>
+<body>
+
+  <div class="content">
+    <h1 class="title"> prueba de carrusel </h1>
+  </div>
+
+  <div class="container">
+<div class="slider">
+    <div class="slides is-size-4">
+        <div class="slide container" style="background-color: #ff5733;">
+	  Slide 1<br>
+	  jdjfdjfdj<br>
+	  asdf
+	</div>
+        <div class="slide container" style="background-color:lightblue;">
+
+<div class="hero is-halfheight is-link">
+  <div class="hero-body">
+    <div class="content">
+      Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+    </div>
+  </div>
+</div>
+
+	</div>
+        <div class="slide container" style="background-color: yellow;">Slide 3</div>
+    </div>
+</div>
+  </div>
+<script>
+    // JavaScript para controlar el carrusel
+    let counter = 0;
+
+    function slide() {
+    let slider = document.querySelector('.slider');
+    let slides = document.querySelector('.slides');
+    let slideWidth = document.querySelector('.slide').clientWidth;
+
+
+        counter++;
+        if (counter === slides.children.length) {
+            counter = 0;
+        }
+        slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+    }
+
+    setInterval(slide, 2500); // Cambia cada 2 segundos
+</script>
+</body>
+</html>
